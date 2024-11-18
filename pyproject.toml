@@ -1,0 +1,28 @@
+[project]
+name = "nonebot-plugin-zepplife"
+version = "0.1.0"
+description = "基于Nonebot框架的ZeppLife数据修改机器人插件"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {email = "2214902964@qq.com"},
+    {name = "1296lol"}
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+license = {text = "Apache-2.0"}
+
+dependencies = [
+    "nonebot2>=2.2.0",
+    "nonebot-adapter-onebot>=2.1.5",
+    "requests>=2.31.0",
+    "pydantic>=1.10.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/1296lol/nonebot-plugin-zepplife"
