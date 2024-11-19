@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-zepplife"
-version = "0.1.0"
+version = "0.1.1"
 description = "基于Nonebot框架的ZeppLife数据修改机器人插件"
 readme = "README.md"
 requires-python = ">=3.9"
