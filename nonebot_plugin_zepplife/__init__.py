@@ -6,6 +6,23 @@ from nonebot.internal.params import ArgPlainText
 from nonebot.matcher import Matcher
 from .Config import Config
 from nonebot.log import logger
+from nonebot.plugin import PluginMetadata
+
+# ---------------------------Configurations---------------------------
+__plugin_meta__ = PluginMetadata(
+    name="nonebot-plugin-zepplife",
+    description="基于调用xwteam平台专属api运行的机器人插件，目前仅支持Zepp、微信、支付宝刷步，后续还会更新其他功能",
+    usage="",
+    type='application',
+    homepage="https://github.com/1296lol/nonebot-plugin-zepplife",
+    config=Config,
+    supported_adapters={"~onebot.v11"},
+    extra = {
+        "author": "1296",
+        "email":"hh1296@foxmail.com"
+    }
+)
+
 
 conf = get_plugin_config(Config)
 key = conf.key
