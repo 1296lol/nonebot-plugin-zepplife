@@ -26,7 +26,7 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 ## 📖 介绍
 
 # <font color="red">注意</font>
-在刷步之前，请确保你拥有ZeppLife的账号以及该账号已绑定微信、支付宝等第三方平台。
+在刷步之前，请确保你拥有ZeppLife的账号以及该账号已绑定微信、支付宝等第三方平台。(这点非常重要哦)
 
 ## About:如何获取key
 
@@ -80,9 +80,12 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 
 | 配置项 | 必填 | 默认值 | 类型 |
 |:-----:|:----:|:----:|:----:|
-| XWTEAM_KEY | 是 | 替换为你的key | String |
-| XWTEAM_USER | 是 | Zepp账号邮箱 | String |
-| XWTEAM_PASSWORD | 是 | Zepp密码 | String |
+| XWTEAM_KEY | 是 | none | String |
+| XWTEAM_USER | 是 | none | String |
+| XWTEAM_PASSWORD | 是 | none | String |
+| PRIVATE_CHAT | 否 | True | bool |
+| ONLY_SUPERUSERS_USED | 否 | True | bool |
+| HANDLE_MODULE | 否 | True | bool |
 
 以下是一个样例
 
@@ -96,7 +99,7 @@ XWTEAM_PASSWORD="123456" #这里换成你的Zepp密码
 ### 指令表
 | 指令 | 权限 | 需要@ | 范围 | 说明 |
 |:-----:|:----:|:----:|:----:|:----:|
-| 刷步 | 好友 | 是 | 私聊 | 直接发送 |
+| 刷步 | 好友 | -- | 私聊 | 直接发送 |
 ### 效果图
 ![image](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zeeplife-1.png)
 ![image](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zeeplife-2.png)
