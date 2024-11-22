@@ -85,7 +85,6 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 
 | 配置项 | 必填 | 默认值 | 类型 |
 |:-----:|:----:|:----:|:----:|
-~~| XWTEAM_KEY | 是 | none | String |~~
 | XWTEAM_USER | 是 | none | String |
 | XWTEAM_PASSWORD | 是 | none | String |
 | PRIVATE_CHAT | 否 | True | bool |
