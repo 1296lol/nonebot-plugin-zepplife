@@ -28,10 +28,15 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 # <font color="red">注意</font>
 在刷步之前，请确保你拥有ZeppLife的账号以及该账号已绑定微信、支付宝等第三方平台。(这点非常重要哦)
 
-## About:如何获取key
+## ~~About:如何获取key~~
 
 
-进入[xwteam平台官网](https://api.xwteam.cn/)，注册后即可在密钥管理中查看自己专属的api_key
+~~进入[xwteam平台官网](https://api.xwteam.cn/)，注册后即可在密钥管理中查看自己专属的api_key~~
+
+## Tips
+
+
+由于未知原因，网站关闭了接口功能。现改用新的接口实现刷步，仅需注册zepplife账号并绑定微信或支付宝即可。
 
 ## 💿 安装
 
@@ -80,7 +85,7 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 
 | 配置项 | 必填 | 默认值 | 类型 |
 |:-----:|:----:|:----:|:----:|
-| XWTEAM_KEY | 是 | none | String |
+~~| XWTEAM_KEY | 是 | none | String |~~
 | XWTEAM_USER | 是 | none | String |
 | XWTEAM_PASSWORD | 是 | none | String |
 | PRIVATE_CHAT | 否 | True | bool |
@@ -90,7 +95,6 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 以下是一个样例
 
 ```
-XWTEAM_KEY="hahahhahahhh" #这里换成你的key
 XWTEAM_USER="123456@example.com" #这里换成你的Zepp邮箱
 XWTEAM_PASSWORD="123456" #这里换成你的Zepp密码
 ```
@@ -99,8 +103,8 @@ XWTEAM_PASSWORD="123456" #这里换成你的Zepp密码
 ### 指令表
 | 指令 | 权限 | 需要@ | 范围 | 说明 |
 |:-----:|:----:|:----:|:----:|:----:|
-| 刷步 | 好友 | -- | 私聊 | 直接发送 |
+| 刷步 | 好友 | -- | 私聊 | 获得帮助 |
+| autostep | 好友 | -- | 私聊 | 自动刷步 |
+| manualstep | 好友 | -- | 私聊 | 手动刷步 |
 ### 效果图
-![image](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zeeplife-1.png)
-![image](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zeeplife-2.png)
-
+![image](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zepplife-3.png)

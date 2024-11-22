@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "nonebot-plugin-zepplife"
-version = "0.1.3"
-description = "基于NoneBot框架的ZeppLife数据修改机器人插件"
+version = "0.1.4"
+description = "ZeppLife数据修改Nonebot机器人插件"
 authors = ["1296 <hh1296@foxmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/1296lol/nonebot-plugin-zepplife"

@@ -6,7 +6,8 @@ config = nonebot.get_driver().config
 
 
 class Config(BaseModel):
-    key: str = config.xwteam_key
+    # 由于未知原因，网站关闭了相关功能，现改为调用新的api，仅注册zepplife账号即可
+    # key: str = config.xwteam_key
     user: str = config.xwteam_user
     password: str = config.xwteam_password
     superusers: List[str] = config.superusers
