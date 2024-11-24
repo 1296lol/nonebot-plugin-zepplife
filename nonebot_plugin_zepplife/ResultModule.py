@@ -1,6 +1,3 @@
-import json
-
-
 def load_module(data):
     # 可自行修改详情，美观建议
     module = (

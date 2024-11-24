@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "nonebot-plugin-zepplife"
-version = "0.1.4"
-description = "ZeppLife数据修改Nonebot机器人插件"
+version = "0.1.5"
+description = "基于调用xwteam平台专属api运行的机器人插件，目前仅支持Zepp、微信、支付宝刷步，后续还会更新其他功能"
 authors = ["1296 <hh1296@foxmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/1296lol/nonebot-plugin-zepplife"
@@ -12,7 +12,6 @@ python = "^3.9"
 nonebot2 = "^2.2.0"
 nonebot-adapter-onebot = "^2.2.0"
 httpx = "^0.24.0"
-requests = "^2.28.1"
 
 [build-system]
 requires = ["poetry-core"]

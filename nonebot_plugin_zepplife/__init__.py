@@ -1,7 +1,7 @@
 from nonebot.adapters.onebot.v11 import Message, PrivateMessageEvent, Bot
-from nonebot import on_command, get_plugin_config
+from nonebot import on_command
 from nonebot.internal.params import ArgPlainText
-from .Config import Config
+from .Config import Config, conf
 from nonebot.plugin import PluginMetadata
 from .Step import Step
 
@@ -20,10 +20,10 @@ __plugin_meta__ = PluginMetadata(
     }
 )
 
-conf = get_plugin_config(Config)
-# key = conf.key
-user = conf.user
-password = conf.password
+
+# key = conf.xwteam_key
+user = conf.zepplife_user
+password = conf.zepplife_password
 private_chat = conf.private_chat
 message_block_private = conf.message_block_private
 message_block_config = conf.message_block_config
@@ -38,6 +38,17 @@ matcher = on_command('刷步', priority=50, block=True)
 # 私聊响应
 @matcher.handle()
 async def start(bot: Bot, event: PrivateMessageEvent):
+    await matcher.send(Message("刷步方式：发送对应前缀指令后按提示操作即可\n\nmanualstep:手动刷步\n\nautostep:自动刷步"))
+
+
+manual = on_command("manualstep", priority=50, block=True)
+
+auto = on_command("autostep", priority=50, block=True)
+
+
+@manual.got("manual_input",
+            prompt="请输入账号、密码、步数，格式为：账号,密码,步数。\n\n例如：abc@example.com,password,1000\n\n输入”取消“退出。")
+async def handle_choice(event: PrivateMessageEvent, manual_input: str = ArgPlainText()):
     user_id = event.get_user_id()
 
     if not user or not password:
@@ -53,21 +64,24 @@ async def start(bot: Bot, event: PrivateMessageEvent):
     if not private_chat:
         await matcher.finish(Message(message_block_private))
         return
-
-    await matcher.send(Message("刷步方式：发送对应前缀指令后按提示操作即可\n\nmanualstep:手动刷步\n\nautostep:自动刷步"))
-
-
-manual = on_command("manualstep", priority=50, block=True)
-
-auto = on_command("autostep", priority=50, block=True)
-
-
-@manual.got("manual_input",
-            prompt="请输入账号、密码、步数，格式为：账号,密码,步数。\n\n例如：abc@example.com,password,1000")
-async def handle_choice(event: PrivateMessageEvent, manual_input: str = ArgPlainText()):
     await Step.manual_step(event, manual_input, manual)
 
 
 @auto.got("steps", prompt="请输入步数，输入“取消”退出。")
 async def handle_auto_step(event: PrivateMessageEvent, steps: str = ArgPlainText()):
+    user_id = event.get_user_id()
+
+    if not user or not password:
+        # if not key or not user or not password:
+        # raise ValueError(message_block_config)
+        await matcher.finish(Message(message_block_config))
+        return
+
+    if user_id not in superusers and only_superusers_used:
+        await matcher.finish(Message(message_block_users))
+        return
+
+    if not private_chat:
+        await matcher.finish(Message(message_block_private))
+        return
     await Step.auto_step(event, steps, auto)

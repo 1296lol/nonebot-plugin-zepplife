@@ -85,8 +85,8 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 
 | 配置项 | 必填 | 默认值 | 类型 |
 |:-----:|:----:|:----:|:----:|
-| XWTEAM_USER | 是 | none | String |
-| XWTEAM_PASSWORD | 是 | none | String |
+| ZEPPLIFE_USER | 是 | none | String |
+| ZEPPLIFE_PASSWORD | 是 | none | String |
 | PRIVATE_CHAT | 否 | True | bool |
 | ONLY_SUPERUSERS_USED | 否 | True | bool |
 | HANDLE_MODULE | 否 | True | bool |
@@ -94,8 +94,8 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 以下是一个样例
 
 ```
-XWTEAM_USER="123456@example.com" #这里换成你的Zepp邮箱
-XWTEAM_PASSWORD="123456" #这里换成你的Zepp密码
+ZEPPLIFE_USER="123456@example.com" #这里换成你的Zepp邮箱
+ZEPPLIFE_PASSWORD="123456" #这里换成你的Zepp密码
 ```
 
 ## 🎉 使用
