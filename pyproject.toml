@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-zepplife"
-version = "0.1.6"
+version = "0.1.7"
 description = "基于调用xwteam平台专属api运行的机器人插件，目前仅支持Zepp、微信、支付宝刷步，后续还会更新其他功能"
 authors = ["1296 <hh1296@foxmail.com>"]
 readme = "README.md"
