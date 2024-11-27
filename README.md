@@ -38,6 +38,10 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 
 由于未知原因，网站关闭了接口功能。现改用新的接口实现刷步，仅需注册zepplife账号并绑定微信或支付宝即可。
 
+
+zepplife账号注册请在手机应用商店中下载Zepplife(原小米运动)，按提示注册并绑定后即可卸载软件。
+
+
 ## 💿 安装
 
 <details open>
@@ -87,9 +91,6 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 |:-----:|:----:|:----:|:----:|
 | ZEPPLIFE_USER | 是 | none | String |
 | ZEPPLIFE_PASSWORD | 是 | none | String |
-| PRIVATE_CHAT | 否 | True | bool |
-| ONLY_SUPERUSERS_USED | 否 | True | bool |
-| HANDLE_MODULE | 否 | True | bool |
 
 以下是一个样例
 
@@ -102,8 +103,9 @@ ZEPPLIFE_PASSWORD="123456" #这里换成你的Zepp密码
 ### 指令表
 | 指令 | 权限 | 需要@ | 范围 | 说明 |
 |:-----:|:----:|:----:|:----:|:----:|
-| 刷步 | 好友 | -- | 私聊 | 获得帮助 |
-| autostep | 好友 | -- | 私聊 | 自动刷步 |
-| manualstep | 好友 | -- | 私聊 | 手动刷步 |
+| stephelp/刷步帮助 | -- | 是 | 私聊、群聊 | 获得帮助 |
+| stepcheck/刷步检查 | -- | 是 | 私聊、群聊 | 检查配置 |
+| autostep/自动刷步 | -- | 是 | 私聊、群聊 | 自动刷步 |
+| manualstep/手动刷步 | -- | 是 | 私聊、群聊 | 手动刷步 |
 ### 效果图
-![image](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zepplife-3.png)
+![没有图片就代表我还没做效果图，哈哈](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zepplife-4.png)
