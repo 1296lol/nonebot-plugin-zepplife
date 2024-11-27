@@ -1,6 +1,7 @@
 import httpx
 from httpx import AsyncClient
-from nonebot.adapters.onebot.v11 import Message
+from nonebot.adapters.onebot.v11 import Message, MessageEvent
+from nonebot.exception import FinishedException
 from nonebot.matcher import Matcher
 from nonebot.log import logger
 from .Config import conf
@@ -21,7 +22,7 @@ group_at = conf.group_at
 
 class Step:
     @staticmethod
-    async def manual_step(manual_input: str, matcher: Matcher):
+    async def manual_step(event: MessageEvent, manual_input: str, matcher: Matcher):
         try:
             if manual_input == "取消":
                 await matcher.finish(Message("已取消手动刷步。"), at_sender=group_at)
@@ -56,6 +57,8 @@ class Step:
             if handle_module:
                 message += f"\n详情: {e}"
             await matcher.finish(Message(message), at_sender=group_at)
+        except FinishedException:
+            raise FinishedException
         except Exception as e:
             message = message_block_unknownerror
             if handle_module:
@@ -63,7 +66,7 @@ class Step:
             await matcher.finish(Message(message), at_sender=group_at)
 
     @staticmethod
-    async def auto_step(steps: str, matcher: Matcher):
+    async def auto_step(event: MessageEvent, steps: str, matcher: Matcher):
         if steps == "取消":
             await matcher.finish(Message("已取消自动刷步。"), at_sender=group_at)
             return
