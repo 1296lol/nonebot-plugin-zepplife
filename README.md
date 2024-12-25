@@ -28,6 +28,9 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 # <font color="red">注意</font>
 在刷步之前，请确保你拥有ZeppLife的账号以及该账号已绑定微信、支付宝等第三方平台。(这点非常重要哦)
 
+# 📢 常见问题
+如果出现特殊报错，请试着在本地关闭某些配置项（~\your_bot\.venv\Lib\site-packages\nonebot_plugin_zepplife\Config.py）
+
 ## ~~About:如何获取key~~
 
 
