@@ -29,10 +29,8 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 在刷步之前，请确保你拥有ZeppLife的账号以及该账号已绑定微信、支付宝等第三方平台。(这点非常重要哦)
 
 ### 📢 常见问题
-如果出现特殊报错，请试着在本地关闭某些配置项。路径如下：
-`~\your_bot\.venv\Lib\site-packages\nonebot_plugin_zepplife\Config.py`
 
-应用商店下载安装Zepp(原小米运动)，进入后按提示注册账号。其中，<font color="red">**Zepplife账号必须是邮箱。**</font>
+应用商店下载安装Zepp(原小米运动)，进入后按提示注册账号并登录。其中，<font color="red">**Zepplife账号必须是邮箱。**</font>
 
 完成后在个人中心找到第三方接口绑定，选择微信或者支付宝按要求操作即可。绑定完成后即可卸载Zepp。
 
