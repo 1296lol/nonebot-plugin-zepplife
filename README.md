@@ -23,23 +23,15 @@ _✨一款基于修改ZeppLife数据实现刷步的Nonebot机器人插件✨_
 
 这是一款基于调用xwteam平台专属api运行的机器人插件，目前仅支持Zepp、微信、支付宝刷步，后续还会更新其他功能
 
-## 📖 介绍
+# 📖 介绍
 
-# <font color="red">注意</font>
+## ⚡ <font color="red">注意</font>
 在刷步之前，请确保你拥有ZeppLife的账号以及该账号已绑定微信、支付宝等第三方平台。(这点非常重要哦)
 
-## ~~About:如何获取key~~
+应用商店下载安装Zepp(原小米运动)，进入后按提示注册账号。其中，<font color="red">**Zepplife账号必须是邮箱。**</font>
 
+完成后在个人中心找到第三方接口绑定，选择微信或者支付宝按要求操作即可。绑定完成后即可卸载Zepp。
 
-~~进入[xwteam平台官网](https://api.xwteam.cn/)，注册后即可在密钥管理中查看自己专属的api_key~~
-
-## Tips
-
-
-由于未知原因，网站关闭了接口功能。现改用新的接口实现刷步，仅需注册zepplife账号并绑定微信或支付宝即可。
-
-
-zepplife账号注册请在手机应用商店中下载Zepplife(原小米运动)，按提示注册并绑定后即可卸载软件。
 
 
 ## 💿 安装
@@ -85,6 +77,14 @@ zepplife账号注册请在手机应用商店中下载Zepplife(原小米运动)�
 
 ## ⚙️ 配置
 
+# ✨ 注意
+
+***自`0.1.8`版本开始，该插件移除了对`.env`配置文件的填写要求。确保你的`.env`文件中含有超级用户字段即可。***
+
+***如果你的版本为`0.1.7`及以下，请参考以下旧版配置要求。***
+
+### ⚙ 旧版配置要求
+
 在 nonebot2 项目的`.env`文件中添加下表中的必填配置
 
 | 配置项 | 必填 | 默认值 | 类型 |
@@ -107,5 +107,10 @@ ZEPPLIFE_PASSWORD="123456" #这里换成你的Zepp密码
 | stepcheck/刷步检查 | -- | 是 | 私聊、群聊 | 检查配置 |
 | autostep/自动刷步 | -- | 是 | 私聊、群聊 | 自动刷步 |
 | manualstep/手动刷步 | -- | 是 | 私聊、群聊 | 手动刷步 |
+| savemydata/保存我的数据 | -- | -- | 私聊 | 保存个人数据 |
+| modifymydata/修改我的数据 | -- | -- | 私聊 | 修改个人数据 |
+| selectmydata/查看我的数据 | -- | -- | 私聊 | 查看个人数据 |
+| deletemydata/删除我的数据 | -- | -- | 私聊 | 删除个人数据 |
+
 ### 效果图
-![没有图片就代表我还没做效果图，哈哈](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zepplife-4.png)
+![没有图片就代表我还没做效果图，哈哈](https://gitee.com/lol1296/picturebases/raw/master/nonebot-plugin-zepplife-5.png)
